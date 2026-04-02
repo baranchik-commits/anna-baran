@@ -1,0 +1,66 @@
+:root {
+    --txt-color-01: #2e2a53; /*color of the main text */
+    --txt-color-02: #ffcaca; /* colour of the main text inversion */
+    --bg-clolor-01: #ddd; /*color background 1 */
+    --lnk-color-01: #999; 
+    --lnk-color-02: #298; 
+    --btn-color-01: #900;
+    --mob-padding: 20px; /* відступи до контенту на мобільному */
+    --max-width: 1380px;
+    --ipad-padding: 50px;
+    --ver-desk-pad: 50px; /*Відступи по вертикалі у секціях */
+    --ver-desk-pad: 25px; /*Відступи по вертикалі у секціях */
+
+}
+
+
+html, body {
+    font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.4;
+    color: var(--txt-color-01);    
+}
+
+ h1, h2, h3, h4, h5, h6 {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 1em;
+ }
+
+ p {
+    margin-bottom: 1em;
+}
+
+
+ h1 { font-size: 2rem; } /* Rem коеф. від фонтсайз баді */
+ h2 { font-size: 1.5rem; }
+ h3 { font-size:1.35rem; }
+ 
+ header,
+ section,
+ footer {
+    padding-top: var(--max-width);
+    padding-bottom: var(--ver-desk-pad);
+ }
+
+.inside {
+    max-width: var(--max-width);
+    margin-left: auto; /*центрування */
+    margin:auto; /* по горизонталі */
+    padding-left: var(--ipad-padding);
+    padding-right: var(--ipad-padding);
+}
+
+@media screen and (max-widh:680px) {
+  .inside {
+ padding-left: var(--mob-padding);
+ padding-right: var(--mob-padding);
+}
+    
+}
+
+

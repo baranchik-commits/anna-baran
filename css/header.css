@@ -1,0 +1,15 @@
+header .row {
+    display: flex;
+    justify-content: space-between; /* Вирівнювання по основній осі (main axist) */
+    align-items: center; /* Вирівнювання елементів по ортог. осі (cross axist) */
+    align-content: center; /* Вирівнювання рядів елементів по ортог. осі */
+    flex-direction: row; /*Напрям головної осі */
+    min-height: 100dvh; /*dvh - Dynsmic Vieport Heigh */
+    /* flex-wrap: wrap; */
+}
+
+header .row .col:last-child {
+    align-self: flex-end;
+    
+
+}
