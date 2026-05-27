@@ -1,0 +1,1035 @@
+/* ПІДКЛЮЧЕННЯ ШРИФТУ */
+@font-face {
+  font-family: "DietDidot";
+  src: url("../fonts/DietDidot.otf");
+}
+
+@font-face {
+  font-family: "Astrados";
+  src: url("../fonts/Astrados.otf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  min-height: 72px;
+  background: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  position: relative;
+  z-index: 20;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(24px, 8vw, 140px);
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(12px, 1vw, 14px);
+  font-weight: 700;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  min-height: 1150px;
+  padding: 120px clamp(24px, 10vw, 190px) 220px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.2) 45%,
+      rgba(0, 0, 0, 0.95) 100%
+    ),
+    url("../img/hero.png");
+
+  background-size: 85%;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+.red-blur {
+  position: absolute;
+  width: clamp(280px, 40vw, 720px);
+  height: clamp(500px, 70vw, 900px);
+
+  background: #5D0101;
+  filter: blur(clamp(90px, 12vw, 190px));
+
+  top: 0;
+  left: -15vw;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 3;
+
+  margin: 0;
+
+  color: #F0F0F0;
+  font-family: "DietDidot", serif;
+  font-size: clamp(90px, 18vw, 300px);
+  font-weight: 400;
+  line-height: 0.8;
+
+  text-align: center;
+}
+
+.hero-signature {
+  position: absolute;
+  z-index: 50;
+
+  top: clamp(120px, 15vw, 190px);
+  left: clamp(260px, 52vw, 900px);
+
+  margin: 0;
+
+  color: #F00;
+  font-family: "Astrados", cursive;
+  font-size: clamp(70px, 9vw, 145px);
+  font-weight: 400;
+  line-height: 1;
+
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+
+  
+}
+
+.hero-slogan {
+  position: absolute;
+
+  top: 365px;
+  right: 180px;
+
+  margin: 0;
+
+  color: #FFF;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(28px, 3vw, 48px);
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  text-align: right;
+
+  letter-spacing: -1px;
+
+  z-index: 20;
+}
+
+.hero-number {
+  position: relative;
+  z-index: 4;
+
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.hero-number-main {
+  margin: 0;
+
+  font-size: clamp(44px, 5vw, 64px);
+  font-weight: 200;
+  line-height: 1;
+}
+
+.hero-number-label {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.hero-button {
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: min(435px, 100%);
+  height: 53px;
+
+  margin-bottom: clamp(40px, 8vw, 80px);
+
+  border-radius: 9px;
+  border: 2px solid #242424;
+
+  background:
+ 
+    linear-gradient(
+      272deg,
+      rgba(0, 0, 0, 0.56) 17.97%,
+      rgba(102, 102, 102, 0.56) 99.33%
+    );
+
+  backdrop-filter: blur(97.3px);
+
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-bottom-text {
+
+  position: relative;
+
+  z-index: 10;
+
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #FFF;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 34px;
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  line-height: 1.05;
+}
+
+.hero-bottom-text span {
+  color: #F00;
+  font-style: italic;
+}
+
+.section {
+  min-height: 100vh;
+  padding: clamp(80px, 10vw, 140px) 40px;
+  background: #000;
+}
+
+.inside {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.inside h2 {
+  margin: 0 0 24px;
+  font-size: clamp(36px, 5vw, 64px);
+}
+
+.inside p {
+  max-width: 700px;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.5;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .hero {
+    background-position: center bottom;
+    padding: 60px 40px;
+  }
+
+  .hero-title {
+    text-align: left;
+  }
+
+  .hero-signature {
+    margin-left: 30%;
+  }
+
+  .hero-slogan {
+    margin-left: 0;
+    margin-right: 0;
+    align-self: flex-end;
+  }
+}
+
+/* PHONE */
+@media (max-width: 600px) {
+  .header {
+    min-height: auto;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 50px 20px 70px;
+
+    background-position: center bottom;
+  }
+
+  .hero-title {
+    font-size: clamp(72px, 25vw, 110px);
+    text-align: left;
+  }
+
+  .hero-signature {
+    margin: -10px 0 40px 40px;
+    font-size: 60px;
+  }
+
+  .hero-slogan {
+    margin: 0 0 50px;
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .hero-number {
+    margin-bottom: 18px;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .hero-bottom-text {
+    font-size: 26px;
+  }
+}
+
+.bottom-gradient {
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 100%;
+
+  height: 260px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.92) 100%
+  );
+
+  z-index: 4;
+
+  pointer-events: none;
+}
+/* SECTION */
+
+.sigma-section {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 1350px;
+  background: #000;
+  overflow: hidden;
+  padding: 120px clamp(24px, 10vw, 190px) 220px;
+}
+
+
+/* RED CENTER BLUR */
+
+.sigma-blur {
+
+  position: absolute;
+
+  width: 700px;
+
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: #B30000;
+
+  filter: blur(220px);
+
+  left: 50%;
+
+  top: 55%;
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0.95;
+
+  z-index: 1;
+}
+
+
+/* TITLE */
+
+.sigma-title {
+
+  position: relative;
+
+  z-index: 5;
+
+  margin: 0;
+
+  text-align: center;
+
+  color: #FFF;
+
+  font-family: "DietDidot", serif;
+
+  font-size: clamp(52px, 7vw, 110px);
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.sigma-title span {
+
+  color: #F00;
+}
+
+
+/* FLOATING TEXTS */
+
+.sigma-text {
+
+  position: absolute;
+
+  z-index: 5;
+
+  margin: 0;
+
+  color: #FFF;
+
+  font-family: Inter, sans-serif;
+
+  font-size: clamp(18px, 2vw, 36px);
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  text-transform: uppercase;
+}
+
+
+/* LEFT TEXT */
+
+.sigma-text-1 {
+
+  left: 12%;
+
+  bottom: 18%;
+
+  background: linear-gradient(
+  102deg,
+  #BCBCBC 27.01%,
+  #565656 58.55%
+);
+
+background-clip: text;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+}
+
+
+/* CENTER TEXT */
+
+.sigma-text-2 {
+
+  left: 42%;
+
+  top: 52%;
+
+  transform: translate(-50%, -50%);
+
+  background: linear-gradient(
+  102deg,
+  #BCBCBC 27.01%,
+  #565656 58.55%
+);
+
+background-clip: text;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+}
+
+
+/* RIGHT TEXT */
+
+.sigma-text-3 {
+
+  right: 14%;
+
+  top: 38%;
+
+  background: linear-gradient(
+  102deg,
+  #BCBCBC 27.01%,
+  #565656 58.55%
+);
+
+background-clip: text;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+}
+
+.freedom-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 1300px;
+
+  background: #000;
+
+  overflow: hidden;
+
+  padding: 120px 40px 120px;
+}
+
+.freedom-red-blur {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: #7A0000;
+  filter: blur(180px);
+  border-radius: 50%;
+  left: 12%;
+  top: 10%;
+  z-index: 1;
+}
+
+.freedom-title {
+  position: relative;
+  z-index: 5;
+
+  margin: 0 0 40px;
+
+  text-align: center;
+  color: #FFF;
+
+  font-family: "DietDidot", serif;
+  font-size: clamp(70px, 8vw, 140px);
+  font-weight: 400;
+  line-height: 0.85;
+}
+
+.freedom-title span {
+  display: block;
+}
+
+.freedom-signature {
+  position: absolute;
+  z-index: 6;
+
+  top: 95px;
+  left: 55%;
+
+  margin: 0;
+
+  color: #F00;
+  font-family: "Astrados", cursive;
+  font-size: clamp(70px, 8vw, 140px);
+  line-height: 1;
+
+ mix-blend-mode: exclusion;
+  pointer-events: none;
+
+}
+
+.freedom-content {
+  position: relative;
+  z-index: 4;
+
+  width: min(1300px, 100%);
+  min-height: 920px;
+
+  margin: 0 auto;
+}
+
+.freedom-card {
+  position: absolute;
+  z-index: 3;
+
+  left: 50%;
+  top: 520px;
+  transform: translateX(-50%);
+
+  width: min(1050px, 80vw);
+  min-height: 520px;
+
+  border-radius: 42px;
+  border: 2px solid #000;
+
+  background: linear-gradient(
+    90deg,
+    rgba(43, 43, 43, 0.58) 0%,
+    rgba(145, 145, 145, 0.38) 100%
+  );
+
+  backdrop-filter: blur(31.5px);
+
+  padding: 110px 90px 90px 470px;
+}
+
+.freedom-statue {
+  position: absolute;
+  z-index: 6;
+
+  left: -80px;
+  bottom: 0;
+
+  width: min(60vw, 950px);
+  height: auto;
+}
+
+.freedom-text {
+  margin: 420;
+  max-width: 330px;
+
+  color: #929292;
+  font-family: Inter, sans-serif;
+  font-size: clamp(14px, 2vw, 35px);
+  font-weight: 400;
+  line-height: 1.075;
+  letter-spacing: -1.6px;
+
+  transform: translateY(-40px);
+}
+
+.freedom-button {
+  position: absolute;
+  left: 50%;
+transform: translateX(-50%);
+
+  width: 390px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.32)
+  );
+
+  color: #FFF;
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+}
+
+.freedom-number {
+  position: absolute;
+  right: 45px;
+  bottom: 45px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-family: "DietDidot", serif;
+  font-size: 72px;
+}
+
+.final-section {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 1500px;
+
+  background: #000;
+
+  overflow: hidden;
+
+  padding: 140px 20px 220px;
+}
+
+
+/* TITLE */
+
+.final-title {
+
+  margin: 0 0 80px;
+
+  text-align: center;
+
+  color: #F2F2F2;
+
+  font-family: "DietDidot", serif;
+
+  font-size: clamp(90px, 12vw, 220px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+
+/* CONTENT */
+
+.final-content {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: clamp(60px, 10vw, 180px);
+
+  margin-bottom: 120px;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.final-column {
+
+  max-width: 320px;
+}
+
+.final-column p {
+
+  margin: 0;
+
+  color: #B5B5B5;
+
+  font-family: Inter, sans-serif;
+
+  font-size: clamp(22px, 2vw, 40px);
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -1.6px;
+}
+
+
+/* BUTTON */
+
+.final-button {
+
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto;
+
+  width: min(520px, 90%);
+
+  height: 72px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.22)
+  );
+
+  color: #FFF;
+
+  text-decoration: none;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 400;
+
+  backdrop-filter: blur(20px);
+}
+
+
+/* IMAGE */
+
+
+.final-bottom {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.final-bottom {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 1200px;
+
+  margin-top: 120px;
+
+  overflow: hidden;
+
+  background-image: url("../img/final-statue.png");
+
+  background-size: 60%;
+
+  background-position: center top;
+
+  background-repeat: no-repeat;
+}
+.final-bottom-gradient {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  width: 1980px;
+  height: 904px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    #000 102.84%
+  );
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+.final-red-signature {
+  position: absolute;
+  right: 28%;
+  top: 260px;
+
+  margin: 0;
+
+  color: #F00;
+  font-family: "Astrados", cursive;
+  font-size: clamp(56px, 7vw, 120px);
+  line-height: 0.9;
+
+  z-index: 3;
+}
+
+.site-footer {
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+
+  width: 100%;
+  text-align: center;
+
+  z-index: 4;
+}
+
+.site-footer p {
+  margin: 0;
+
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.site-footer {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+
+  padding: 40px 60px 25px;
+
+  z-index: 5;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  backdrop-filter: blur(12px);
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* CONTENT */
+
+.footer-content {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 60px;
+
+  margin-bottom: 30px;
+}
+
+
+/* LEFT */
+
+.footer-left h3 {
+
+  margin: 0 0 12px;
+
+  color: #FFF;
+
+  font-family: "DietDidot", serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+}
+
+.footer-left p {
+
+  margin: 0;
+
+  color: #8E8E8E;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+/* CENTER + RIGHT */
+
+.footer-center,
+.footer-right {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-center a,
+.footer-right a {
+
+  color: #BDBDBD;
+
+  text-decoration: none;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+.footer-center a:hover,
+.footer-right a:hover {
+
+  color: #FFF;
+}
+
+
+/* BOTTOM */
+
+.footer-bottom {
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+
+  margin: 0;
+
+  color: #6F6F6F;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 13px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sigma-text-1 {
+  transition-delay: 0.2s;
+}
+
+.sigma-text-2 {
+  transition-delay: 0.5s;
+}
+
+.sigma-text-3 {
+  transition-delay: 0.8s;
+}
